@@ -1,6 +1,7 @@
 package inhatc.cse.kitaebshop.item.entity;
 
 import inhatc.cse.kitaebshop.common.entity.BaseEntity;
+import inhatc.cse.kitaebshop.item.constant.ItemSellStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +30,7 @@ public class Item  extends BaseEntity {
     @Lob
     @Column(nullable = false)
     private String itemDetail;
+
+    @Enumerated(EnumType.STRING)
+    private ItemSellStatus itemSellStatus;
 }

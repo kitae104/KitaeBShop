@@ -2,6 +2,7 @@ package inhatc.cse.kitaebshop.item.controller;
 
 import inhatc.cse.kitaebshop.item.dto.ItemDataDto;
 import inhatc.cse.kitaebshop.item.dto.ItemDto;
+import inhatc.cse.kitaebshop.item.dto.ItemFormDto;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ItemController {
 
     @GetMapping("/admin/item/add")
-    public String itemAdd(){
+    public String itemAdd(Model model){
+        model.addAttribute("itemFormDto", new ItemFormDto());
         return "item/add";
     }
 

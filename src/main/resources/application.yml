@@ -36,6 +36,13 @@ spring:
       name: test
       password: 1234
 
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+
+itemImgLocation: D:/shop/item # 서버 내부에서 사용(파일 저장 경로)
+uploadPath: file:///D:/shop # 클라이언트가 파일 접근을 위한 URL 경로 사용
 
 
 logging:
