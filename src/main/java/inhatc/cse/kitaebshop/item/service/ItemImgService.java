@@ -14,7 +14,7 @@ import java.io.IOException;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class ItemImgServe {
+public class ItemImgService {
 
     @Value(value = "${itemImgLocation}")
     private String itemImgLocation;
@@ -37,4 +37,6 @@ public class ItemImgServe {
         itemImg.updateItemImage(oriImgName, imgName, imgUrl);
         itemImgRepository.save(itemImg);
     }
+
+
 }
